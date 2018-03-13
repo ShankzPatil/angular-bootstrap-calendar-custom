@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var angular = require('angular');
 
@@ -115,6 +115,7 @@ angular
 
     return {
       restrict: 'A',
+      replace: true,
       controller: 'MwlDraggableCtrl'
     };
 

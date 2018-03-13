@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var angular = require('angular');
 
@@ -17,7 +17,7 @@ describe('dynamicDirectiveTemplate directive', function() {
     };
     scope.baz = 'baz';
     $templateCache.put('foo.html', 'foo {{ baz }}');
-    elm = $compile('<div mwl-dynamic-directive-template name="foo" overrides="overrides"></div>')(scope);
+    elm = $compile('<div mwl-dynamic-directive-template name="foo" overrides="overrides" class="flex-container flex-column flex-column-size"></div>')(scope);
     scope.$apply();
   }));
 

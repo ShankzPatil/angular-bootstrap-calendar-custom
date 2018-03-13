@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var angular = require('angular');
 
@@ -164,8 +164,9 @@ angular
   .directive('mwlCalendarMonth', function() {
 
     return {
-      template: '<div mwl-dynamic-directive-template name="calendarMonthView" overrides="vm.customTemplateUrls"></div>',
+        template: '<div mwl-dynamic-directive-template name="calendarMonthView" overrides="vm.customTemplateUrls" class="flex-container flex-column flex-column-size"></div>',
       restrict: 'E',
+      replace: true,
       require: '^mwlCalendar',
       scope: {
         events: '=',

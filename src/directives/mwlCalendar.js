@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var angular = require('angular');
 var LOG_PREFIX = 'Bootstrap calendar:';
@@ -129,8 +129,9 @@ angular
   .directive('mwlCalendar', function() {
 
     return {
-      template: '<div mwl-dynamic-directive-template name="calendar" overrides="vm.customTemplateUrls"></div>',
+      template: '<div mwl-dynamic-directive-template name="calendar" overrides="vm.customTemplateUrls" class="flex-container flex-column flex-column-size"></div>',
       restrict: 'E',
+      replace: true,
       scope: {
         events: '=',
         view: '=',

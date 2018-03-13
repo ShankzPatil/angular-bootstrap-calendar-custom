@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 var angular = require('angular');
 var calendarUtils = require('calendar-utils');
@@ -149,7 +149,8 @@ angular
 
     return {
       restrict: 'E',
-      template: '<div mwl-dynamic-directive-template name="calendarHourList" overrides="vm.customTemplateUrls"></div>',
+      replace: true,
+      template: '<div mwl-dynamic-directive-template name="calendarHourList" overrides="vm.customTemplateUrls" class="flex-container flex-column flex-column-size"></div>',
       controller: 'MwlCalendarHourListCtrl as vm',
       scope: {
         viewDate: '=',
